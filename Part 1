@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Arithmetic Operations</title>
+  <style>
+    .error {
+      color: rgb(43, 0, 255);
+    }
+  </style>
+</head>
+<body>
+  <h1>Arithmetic Operations</h1>
+
+  <label for="num1">Number 1:</label>
+  <input type="text" id="num1" required>
+  <span id="num1-error" class="error"></span>
+
+  <label for="num2">Number 2:</label>
+  <input type="text" id="num2" required>
+  <span id="num2-error" class="error"></span>
+
+  <button onclick="performOperation('+')">Add</button>
+  <button onclick="performOperation('-')">Subtract</button>
+  <button onclick="performOperation('*')">Multiply</button>
+  <button onclick="performOperation('/')">Divide</button>
+
+  <br>
+
+  <label id="msg"></label>
+
+  <script src="script.js"></script>
+</body>
+</html>
