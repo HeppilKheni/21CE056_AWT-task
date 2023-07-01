@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-3</title>
+    <script>
+        var CSPIT = {
+            departments: ['CE', 'IT', 'CS', 'EC', 'EE', 'CL', 'ME'],
+            yearOfEstablishment: 2000,
+            location: 'CHANGA',
+            getDetails: function() {
+              console.log('CSPIT Details:');
+              console.log('Departments:', this.departments);
+              console.log('Year of Establishment:', this.yearOfEstablishment);
+              console.log('Location:', this.location);
+            }
+          };
+          
+          CSPIT.CE = Object.create(CSPIT);
+          CSPIT.CE.totalStudents = 200;
+          CSPIT.CE.totalFaculties = 32;
+          
+          // Retrieving all possible records from CSPIT
+          for (var prop in CSPIT) {
+            if (typeof CSPIT[prop] !== 'function') {
+              console.log(prop + ':', CSPIT[prop]);
+            }
+          }
+          
+          // Retrieving all possible records from CE department
+          for (var prop of Object.keys(CSPIT.CE)) {
+            console.log(prop + ':', CSPIT.CE[prop]);
+          }
+          
+    </script>
+</head>
+<body>
+   
+</body>
+</html>

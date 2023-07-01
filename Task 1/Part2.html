@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Part-2</title>
+  </head>
+  <body>
+    <div id="all">
+      <h4>Enter a Number : <input type="Number" id="num1" onblur="an()" /></h4>
+      <span id="num1E" style="color: red"></span>
+      <h4>Enter a Number : <input type="Number" id="num2" onblur="an()" /></h4>
+      <span id="num2E" style="color: red"></span>
+      <br />
+      <label id="result"></label>
+    </div>
+  </body>
+  <script>
+    function an() {
+      let numf = document.getElementById("num1").value;
+      let nums = document.getElementById("num2").value;
+      document.getElementById("num1E").innerHTML = "";
+      document.getElementById("num2E").innerHTML = "";
+      if (isNaN(numf) || numf === "") {
+        document.getElementById("num1E").textContent = "* Enter a Valid Number";
+        return;
+      }
+      if (isNaN(nums) || nums === "") {
+        document.getElementById("num2E").textContent = "* Enter a Valid Number";
+        return;
+      }
+
+      let sum = Number(numf) + Number(nums);
+      let sub = Number(numf) - Number(nums);
+      let mul = Number(numf) * Number(nums);
+      console.log("hajdh");
+      console.log(numf);
+      console.log(nums);
+      document.getElementById("result").innerHTML =" sum : "+sum+" substract: "+sub+" mul: "+mul;
+    }
+  </script>
+</html>
